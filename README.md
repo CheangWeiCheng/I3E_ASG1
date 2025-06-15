@@ -5,15 +5,24 @@ This game is a simple third-person 3D platformer. The third-person perspective w
 
 ## 🛠️ Installation Guide
 ### How to Play (Windows)
-1. Download the latest release from [GitHub Releases]()
+1. Download the latest release from https://github.com/CheangWeiCheng/I3E_ASG1.git
 2. Extract the ZIP file
 3. Run `I3E.exe` from the `Builds` folder
 
 ### How to Edit in Unity
-1. Install [Unity Hub]()
-2. Clone repository:
-   ```bash
-   git clone [your-repo-url]
+1. Download and install Unity from https://unity.com/download
+2. Download and install GitHub Desktop from https://github.com/apps/desktop
+3. In GitHub Desktop
+    a) Go to File -> Clone Repository -> URL
+    b) Input the URL https://github.com/CheangWeiCheng/I3E_ASG1.git
+    c) Choose your local path
+    d) Click Clone.
+4. In Unity Hub:
+    a) Select "Open" → "Add project from disk"
+    b) Navigate to the cloned repository folder
+5. Ensure these packages are installed:
+    a) Input System (Window > Package Manager)
+    b) Cinemachine (for camera controls)
 
 ## 🖥️ System Requirements
 Platform: Windows

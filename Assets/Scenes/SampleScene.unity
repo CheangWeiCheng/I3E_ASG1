@@ -25664,7 +25664,7 @@ GameObject:
   - component: {fileID: 841531500}
   - component: {fileID: 841531499}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: ScoreUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35997,7 +35997,7 @@ GameObject:
   - component: {fileID: 1647372637}
   - component: {fileID: 1647372638}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: HealthUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
