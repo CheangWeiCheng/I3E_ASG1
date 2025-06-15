@@ -40,14 +40,18 @@ public class KeycardBehaviour : MonoBehaviour
 
     public void Highlight()
     {
-        // Change the color of the keycard to highlight it
-        // This is done by setting the material color to the highlight color
+        /// <summary>
+        /// Change the color of the keycard to highlight it
+        /// This is done by setting the material color to the highlight color
+        /// </summary>
         meshRenderer.material = highlightMaterial;
     }
     public void Unhighlight()
     {
-        // Reset the color of the keycard to its original color
-        // This is done by setting the material color back to the original color
+        /// <summary>
+        /// Reset the color of the keycard to its original color
+        /// This is done by setting the material color back to the original color
+        /// </summary>
         meshRenderer.material = originalMaterial;
     }
 

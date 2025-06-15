@@ -15,6 +15,11 @@ public class BoxBehaviour : MonoBehaviour
     AudioClip boxHitAudioClip; // Reference to the AudioClip component for playing sounds
     public GameObject coin;
 
+    /// <summary>
+    /// Method called when another collider enters the trigger collider attached to this GameObject.
+    /// This method checks if the collider belongs to a projectile (tagged as "Projectile").
+    /// </summary>
+
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Projectile"))

@@ -19,6 +19,12 @@ public class DoorLockVisual : MonoBehaviour
     private MeshRenderer meshRenderer;
     private bool isLocked;
 
+    /// <summary>
+    /// Because DoorBehaviour is mapped to the door hinge,
+    /// a separate script is needed to be mapped to the door mesh itself to handle the material visuals.
+    /// It initializes the MeshRenderer component and sets the material based whether the door is locked,
+    /// or whether the player is looking at the door to highlight it.
+    /// </summary>
     void Start()
     {
         // Get the MeshRenderer component attached to this GameObject
@@ -26,24 +32,37 @@ public class DoorLockVisual : MonoBehaviour
         UpdateMaterial();
     }
 
+    /// <summary>
+    /// Method to set the locked state of the door and update the material accordingly.
+    /// </summary>
     public void SetLocked(bool locked)
     {
-        // Set the locked state and update the material accordingly
         isLocked = locked;
         UpdateMaterial();
     }
 
+    /// <summary>
+    /// Change the color of the door to highlight it
+    /// This is done by setting the material color to the highlight color
+    /// </summary>
     public void Highlight()
     {
-        // Change the material to highlight the door
         meshRenderer.material = highlightMaterial;
     }
 
+    /// <summary>
+    /// Reset the color of the door to its original color
+    /// It uses the UpdateMaterial method to revert to the appropriate locked/unlocked material.
+    /// </summary>
     public void Unhighlight()
     {
         UpdateMaterial(); // Revert to appropriate locked/unlocked material
     }
 
+    /// <summary>
+    /// Updates the material of the door based on whether it is locked or not.
+    /// This method is called whenever the locked state changes or when the door is highlighted/unhighlighted.
+    /// </summary>
     void UpdateMaterial()
     {
         // Update the material based on the locked state

@@ -20,7 +20,14 @@ public class ThirdPersonController : MonoBehaviour
     private Rigidbody rb;
     private Camera mainCamera;
     [SerializeField] float groundCheckDistance = .5f;
-    private bool isGrounded
+
+    /// <summary>
+    /// Property to check if the character is grounded
+    /// This property uses a raycast to check if there is ground directly below the character.
+    /// The raycast checks a distance defined by groundCheckDistance.
+    /// If the raycast hits something, it means the character is grounded and can jump.
+    /// </summary>
+    private bool IsGrounded
     {
         get
         {
@@ -28,12 +35,23 @@ public class ThirdPersonController : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Start is called before the first frame update.
+    /// This method initializes the Rigidbody component and caches the main camera for later use.
+    /// It is used to set up the initial state of the player character.
+    /// </summary>
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         mainCamera = Camera.main; // Cache the main camera
     }
 
+    /// <summary>
+    /// FixedUpdate is called at a fixed interval and is used for physics calculations.
+    /// This method handles player movement and rotation based on keyboard input.
+    /// It calculates the movement direction relative to the camera's orientation and applies it to the Rigidbody.
+    /// The player will also rotate to face the direction of movement.
+    /// </summary>
     void FixedUpdate()
     {
         // Get input from keyboard
@@ -62,9 +80,15 @@ public class ThirdPersonController : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Method to make the character jump
+    /// This method checks if the character is grounded before applying the jump force.
+    /// This is done by using a raycast directly pointed downwards to check the distance to the ground.
+    /// If the character is grounded, it plays a jump sound and applies an upward force to the Rigidbody.
+    /// </summary>
     public void Jump()
     {
-        if (isGrounded)
+        if (IsGrounded)
         {
             if (jumpSound != null)
             {

@@ -15,7 +15,11 @@ public class BridgeMovementBehaviour : MonoBehaviour
     float moveSpeed = 1f; // Speed of the bridge movement
     bool isMovingDown; // Flag to determine the direction of movement
 
-    // Update is called once per frame
+    /// <summary>
+    /// Initializes the bridge's position and movement direction.
+    /// Depending on whether the bridge is at the maximum or minimum height,
+    /// isMovingDown is set to true or false respectively, and the bridge moves accordingly.
+    /// </summary>
     void Update()
     {
         if (transform.position.y >= maxY)

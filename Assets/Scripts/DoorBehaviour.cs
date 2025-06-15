@@ -16,6 +16,9 @@ public class DoorBehaviour : MonoBehaviour
     private bool isOpen = false;
     AudioSource doorAudioSource; // Reference to the AudioSource component for playing sounds
 
+    /// <summary>
+    /// Method to initialize the door's state and audio source
+    /// </summary>
     void Start()
     {
         // Initialize lock visual
@@ -27,6 +30,14 @@ public class DoorBehaviour : MonoBehaviour
         // Get the AudioSource component attached to this GameObject
         doorAudioSource = GetComponent<AudioSource>();
     }
+    
+    /// <summary>
+    /// Method to interact with the door
+    /// This method will be called when the player interacts with the door
+    /// It takes a PlayerBehaviour object as a parameter
+    /// This allows the door to check if the player has a keycard to unlock it
+    /// The method is public so it can be accessed from other scripts
+    /// /// </summary>
     public void Interact(PlayerBehaviour player)
     {
         // Check if the door is locked
@@ -57,6 +68,13 @@ public class DoorBehaviour : MonoBehaviour
             ToggleDoor();
         }
     }
+
+    /// <summary>
+    /// Method to toggle the door's state between open and closed
+    /// This method is called when the player interacts with the door and has unlocked it
+    /// It plays a sound effect and rotates the door by 90 degrees clockwise or counterclockwise
+    /// depending on its current state
+    /// </summary>
     public void ToggleDoor()
     {
         Vector3 doorRotation = transform.rotation.eulerAngles;
