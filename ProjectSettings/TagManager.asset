@@ -8,6 +8,8 @@ TagManager:
   - Collectible
   - HealingArea
   - Projectile
+  - Keycard
+  - HazardArea
   layers:
   - Default
   - TransparentFX
