@@ -17,6 +17,12 @@ using UnityEngine.InputSystem;
 
 public class PlayerBehaviour : MonoBehaviour
 {
+    /// <summary>
+    /// Store variables for player behaviour, for example:
+    /// gunPoint is the point from which projectiles are fired,
+    /// fireStrength determines how fast the projectile will travel,
+    /// fireAudioSource is the AudioSource component used to play firing sounds,
+    /// and projectile is the prefab for the projectile that will be fired.
     AudioSource fireAudioSource;
     public GameObject projectile;
     public Transform gunPoint;

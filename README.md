@@ -60,6 +60,6 @@ https://assetstore.unity.com/packages/audio/sound-fx/foley/door-cabinets-lockers
 https://assetstore.unity.com/packages/audio/music/absolutely-free-music-4883
 
 ## Additional Credits
-The scripts PlayerBehaviour.cs, CoinBehaviour.cs and HealthBehaviour.cs were modified from what was provided by my lecturer, Mr Justin Lee.  
+The scripts PlayerBehaviour.cs, CoinBehaviour.cs, HealthBehaviour.cs and BridgeMovementBehaviour.cs were modified from what was provided by my lecturer, Mr Justin Lee.  
 Deepseek AI was used at times to optimise the code and fix certain errors. However, it was not used to write the code entirely.  
 The ground check uses code from this reddit comment: https://www.reddit.com/r/Unity3D/comments/3c43ua/comment/icllc6a/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button
